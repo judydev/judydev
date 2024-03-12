@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:judydev/home_view.dart';
 
 void main() {
   runApp(const MainApp());
@@ -9,13 +10,12 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
-    );
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: const HomeView(),
+        theme: ThemeData(
+          canvasColor: const Color.fromRGBO(215, 200, 160, 1),
+          shadowColor: const Color.fromARGB(255, 120, 134, 225),
+        ));
   }
 }
